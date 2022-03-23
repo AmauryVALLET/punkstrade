@@ -1,0 +1,20 @@
+<h1>Your Crypto Punks</h1>
+
+    <div class="col-4">
+        <ul class="cards-map">
+            <% @punks.each do |punk| %>
+                <div class="card-product">
+                <%= image_tag "#{punk.picture}" %>
+                <div class="card-product-infos">
+                    <h2><%= punk.name %></h2>
+                    <p><%= punk.description %></p>
+                    <br>
+                    <%= link_to "See this punk", punk_path(punk), class: "principal-button" %>
+                    <br>
+                </div>
+                <br>
+                </div>
+                <br>
+            <% end %>
+        </ul>
+    </div>
